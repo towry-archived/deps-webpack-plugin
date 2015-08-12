@@ -1,0 +1,30 @@
+{
+  "name": "deps-webpack-plugin",
+  "version": "1.0.0",
+  "description": "Get dependencies in Webpack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd test && webpack"
+  },
+  "peerDependencies": {
+    "webpack": "^1.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/towry/deps-webpack-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin"
+  ],
+  "author": "Towry Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/towry/deps-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/towry/deps-webpack-plugin#readme",
+  "devDependencies": {
+    "webpack": "*",
+    "react": "*"
+  }
+}
