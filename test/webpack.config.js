@@ -7,6 +7,8 @@ module.exports = {
     filename: "bundle.js"
   },
   plugins: [
-    new depsWebpackPlugin()
+    new depsWebpackPlugin(function (deps) {
+      console.log(deps);
+    })
   ]
 }

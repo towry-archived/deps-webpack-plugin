@@ -1,3 +1,3 @@
 console.log('c.js');
 
-require('react');
+// require('react');
