@@ -9,6 +9,6 @@ module.exports = {
   plugins: [
     new depsWebpackPlugin(function (deps) {
       console.log(deps);
-    })
+    }, 1)
   ]
 }
