@@ -26,7 +26,7 @@ function DepsPlugin (callback) {
 DepsPlugin.prototype.apply = function (compiler) {
   compiler.plugin('emit', function (compilation, compileCallback) {
     var deps = compilation.fileDependencies;
-    this.callback(deps);
+    this.callback(deps, compiler.options);
     compileCallback();
   }.bind(this));
 }
