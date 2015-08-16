@@ -14,18 +14,23 @@ var err = '`' + pkg.name  + '` requires a callback';
  * `deps-webpack-plugin` will gathering information
  * about the files that being required.
  */
-function DepsPlugin (callback, noBail) {
+function DepsPlugin (callback) {
   if (!callback || typeof callback !== 'function') {
     throw new Error(err);
   }
 
   this.callback = callback;
-
-  this.noBail = (noBail && typeof noBail.noBail !== 'undefined') ? noBail.noBail : noBail;
 }
 
 DepsPlugin.prototype.apply = function (compiler) {
-  if (this.noBail) {
+  var options = compiler.options;
+  var noBail = false;
+
+  if (!options.bail) {
+    noBail = true;
+  }
+  
+  if (noBail) {
     compiler.plugin('this-compilation', function (compilation) {
       compilation.plugin('additional-assets', function (cb) {
         this.callback(compilation.fileDependencies || [], compiler.options);

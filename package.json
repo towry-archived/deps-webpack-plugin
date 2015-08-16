@@ -1,6 +1,6 @@
 {
   "name": "deps-webpack-plugin",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Get dependencies in Webpack.",
   "main": "index.js",
   "scripts": {
