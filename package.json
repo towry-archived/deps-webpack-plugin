@@ -1,13 +1,13 @@
 {
   "name": "deps-webpack-plugin",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Get dependencies in Webpack.",
   "main": "index.js",
   "scripts": {
     "test": "cd test && webpack"
   },
   "peerDependencies": {
-    "webpack": "^1.11.0"
+    "webpack": "^1.12.9"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/towry/deps-webpack-plugin#readme",
   "devDependencies": {
-    "webpack": "*",
-    "react": "*"
+    "webpack": "*"
   }
 }
